@@ -112,12 +112,6 @@ async def analyze_page_structure(url: str):
 if __name__ == '__main__':
 	# You can modify this URL to analyze different pages
 
-	urls = [
-		'https://www.mlb.com/yankees/stats/',
-		'https://immobilienscout24.de',
-		'https://www.zeiss.com/career/en/job-search.html?page=1',
-		'https://www.zeiss.com/career/en/job-search.html?page=1',
-		'https://reddit.com',
-	]
+	urls = ['https://www.google.com.co', 'https://site.cariai.com/', 'https://site.cariai.com/gik/']
 	for url in urls:
 		asyncio.run(analyze_page_structure(url))
