@@ -14,14 +14,15 @@ dotenv.load_dotenv()
 browser = Browser(
 	config=BrowserConfig(
 		# NOTE: you need to close your chrome browser - so that this can open your browser in debug mode
-		browser_binary_path='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+		browser_binary_path='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+		headless=True,
 	)
 )
 
 
 async def main():
 	agent = Agent(
-		task='In docs.google.com write my Papa a quick letter',
+		task='Search for the today weather in bogotá colombia',
 		llm=ChatOpenAI(model='gpt-4o'),
 		browser=browser,
 	)
